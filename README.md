@@ -2,4 +2,4 @@
 
 # Data Preprocessing
 
-We preprocessed out data by
+We preprocessed our data by
