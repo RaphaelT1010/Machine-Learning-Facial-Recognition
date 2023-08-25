@@ -13,6 +13,7 @@ The dataset contains a good variety of faces which range from varying ages, peop
 
 To summarize, the dataset contains a large variety and quantity of faces which will be very useful in making a machine learning model.
 
+Link to database: https://ufile.io/40nmtjlw
 ## Introduction
 
 The motivation for this project is to test the limit of our technical abilities by training an unsupervised model to assign its own emotion labels per grey scale image'
