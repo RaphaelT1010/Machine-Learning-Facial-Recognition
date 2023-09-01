@@ -34,7 +34,7 @@ We also plan to get an even amount of images from each emotion class, 547, in or
 The images don't need to be cropped or resized. We don't need to crop them because the images are already pretty decently focused on people's face, and a good facial recognition model should be able to detect faces even in bad circumstances. They don't need to be resized too because they are already very small. Normalization will mostly likely occur. 
 
 ### Models
-Talk about the model we used and why.
+For our Face emotion recognition model, we decided to used unsupervised learning. We used kmeans clustering to cluster the data categorizing it into different groups that could represent the different type of emotions. In our model, the images are converted into 2D arrays. We used PCA to reduce the dimension of the images before fitting them into our kmeans model. Since we have a total of 7 type of emotions, we chose a cluster value of 7. To evaluate the efficiency of the model, we used the silhouette score as metric. So far when training the model we obtain a silhouette score of about 0.3. To improve the model, we applied cross validation. However, the score only increased by about 0.01. An alternative to improve our model could be data transformation or a different form of data preprocessing using an algorithm different from PCA.
 
 ### Over/Under Fitting
 How did we handle over/under fitting?
