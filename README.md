@@ -2,7 +2,9 @@
 
 ## Introduction
 
-We aim to create an unsupervised model and cluster the images via k-means clustering (while also applying PCA). This means taking out the emotion encodings/column (at least) of the original dataset. 
+Facial recognition technology is useful and can be applied to a wide range of applications. It can be used as a strong form of security and can enable developers to create potentially more convenient user interfaces. This makes creating a model for facial recognition important and useful for society.
+
+We aim to create an unsupervised model and that can classify human emotions by using k-means clustering and PCA. This means taking out the emotion encodings/column (at least) of the original dataset. 
 
 ![Kmeans Clustering](images/KmeansClustering.png)
 
