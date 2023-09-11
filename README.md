@@ -81,6 +81,7 @@ We then called accuracy_score to compare how our model clustered each image acco
 ### Model 1 Ver. 1
 
 Silhouette score using SVD:  0.33141524771150843
+
 Silhouette score using PCA:  0.33614953536518816
 
 ![Model1V1Results1](images/Model1V1Results1.png)
