@@ -50,6 +50,10 @@ Since we are going for an unsupervised approach we don't really have a true over
 
 ## Discussion
 #### TALK ABOUT THE DATA HERE, AND OUR THOUGHT PROCESS BEGINNING TO END. REALLY THINK IN THIS SECTION AND SHOW HOW YOU THINK SCIENTIFICALLY 
+In the preprocessing step, we decided to only grab 547 sample images from each class of emotion because one of the classes of emotion only had 547 sample images. Initially, we wanted more than 547 samples to train the model but having more than 547 samples will lead to bias in our model. Therefore, we only have 547 samples from each emotion class. The data was already downsized and gray-scaled so there wasn’t any other thing we would have done other than normalizing the pixels values of each image and dropping the columns “emotion” and “usage”. The column “emotion" is the classification of each image and the “usage” columns specify whether the image will be used for testing or training. We don't need these columns because we are doing unsupervised ML to classify each image and doing our own splitting of the images for testing and training. Before we do any machine learning, we wanted to check and remove any null data so it won’t impact the results of our model. 
+
+Our first model was not that great. The images closest to the centroids of each cluster seem to have no relationship to each other to human's eyes but there is some patterns and relationship that only computer can see. This is to say that there exist some underlying relationship between each images that could be used to better classify the images. We tried printing out more and more of each image at the centroids of each cluster but it seems like every image’s emotion is pretty much random even though they are images from the centroid of each cluster. Out of curiosity, we try a larger set of data to see if it yields better accuracy. And it did! But it only improved the accuracy by a little bit.  
+
 
 ## Conclusion
 #### WRAP UP, MIND BUMP, OPINIONS FUTURE PLANS, WHAT WOULD WE DO DIFFERENT.
