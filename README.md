@@ -51,8 +51,6 @@ We also normalized all pixel values. This was done using min max scalar.
 
 We also dropped the emotion encoding and usage columns of the dataset. 
 
-### Models
-
 ### Model 1 Ver. 1
 Our first model would be focused around K-means clustering and seeing if we should use either an SVD or PCA approach.
 
