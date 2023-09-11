@@ -23,7 +23,11 @@ We wanted to test our technical abilities as well by choosing an unsupervised, i
 The broader impact is that we could give anyone the ability to use our model and classify emotions with any image dataset they have. They would be able to train a model to recognize human emotions without much human input (just by uploading their image dataset)
 
 ## Methodology
+### Data Exploration
+#### TO BE COMPLETED, BRING SOME INFO FROM THE INTRO + BACKGROUND. TALK ABOUT THE DATA
+
 ### Data Preprocessing
+#### THIS SECTION NEEDS TO BE ABOUT WHAT SETS WE TOOK AND WHY.
 The dataset is already almost completely preprocessed. The pixels have been compressed to be 48 x 48 and have already been converted to greyscale. This means we have to do little preprocessing on the images.
 
 However, we plan to normalize the grey scale values within each entry's pixel column. This will make the pixel column more readable, and less greyscale intensity with numerous images may help with overall speed as normalizing may help with gradient calculation.
@@ -33,18 +37,22 @@ We also plan to get an even amount of images from each emotion class, 547, in or
 The images don't need to be cropped or resized. We don't need to crop them because the images are already pretty decently focused on people's face, and a good facial recognition model should be able to detect faces even in bad circumstances. They don't need to be resized too because they are already very small. Normalization will mostly likely occur. 
 
 ### Models
+#### TALK ABOUT WHAT TYPE OF MODELS WE USED, WHY WE USED THEM AND WHY/WHAT ORDER WE USED THEM.
 For our Face emotion recognition model, we decided to used unsupervised learning. We used kmeans clustering to cluster the data categorizing it into different groups that could represent the different type of emotions. In our model, the images are converted into 2D arrays. We used PCA to reduce the dimension of the images before fitting them into our kmeans model. Since we have a total of 7 type of emotions, we chose a cluster value of 7. To evaluate the efficiency of the model, we used the silhouette score as metric. So far when training the model we obtain a silhouette score of about 0.3. To improve the model, we applied cross validation. However, the score only increased by about 0.01. An alternative to improve our model could be data transformation or a different form of data preprocessing using an algorithm different from PCA.
 
 ### First Analysis
 Since we are going for an unsupervised approach we don't really have a true over/under fitting situation so we attempted to compare the clusters to the original dataset. We mapped out our clustered images to the emotions from the original dataset. This was done by plotting a random set of images from each cluster and then mapping out each emotion visually to their respective original emotion. This process was challenging because the clustering wasn't great so we mapped to the emotion that was most dominant. We got an accuracy of about 14% meaning that there was little correlation to the original emotions. Our next steps are to improve the model to increase our silhouette score, which in turn might increase the classification accuracy of the model.
 
 ## Results
-### Graphs
-Describe some of the graphs we generate and what they mean
+#### DUMP OUT THE RESULTS HERE BUT DONT TALK ABOUT THEM, ADD DIAGRAMS OF RESULTS, THE CLUSTERING DIAGRAM, OR OTHERS THAT SHOW OUR RESULTS
+#### LAST PARAGRAPH HERE IS ABOUT THE FINAL MODEL AND FINAL RESULTS SUMMARY
 
-### Other Results (Rename later when we have results)
-Talk about our error results and ant numerical results here.
+## Discussion
+#### TALK ABOUT THE DATA HERE, AND OUR THOUGHT PROCESS BEGINING TO END. REALLY THINK IN THIS SECTION AND SHOW HOW YOU THINK SCIENTIFICALLY 
 
 ## Conclusion
-Wrap up the findings and information. \
-Any future follow ups/investigations or future plans with the project?
+#### WRAP UP, MIND BUMP, OPIONIONS FUTURE PLANS, WHAT WOULD WE DO DIFFERENT.
+
+## Collaboration
+#### EVERYONE WILL BE FILL THIS PART OUT FOLLOW EXAMPLE...
+### Start with Name: Title: Contribution. If the person contributed nothing then just put in writing: Did not participate in the project.
