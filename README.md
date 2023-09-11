@@ -73,13 +73,11 @@ We then called accuracy_score to compare how our model clustered each image acco
 ### Data Exploration
 
 ![DataExplorationResults1](images/DataExplorationResults1.png)
-
 ![DataExplorationResults2](images/DataExplorationResults2.png)
 
 ### Data Preprocessing
 
 Our dataset before:
-
 ![DataPreprocessingResults1](images/DataPreprocessingResults1.png)
 
 Our dataset after, normalized and truncated to 547 entries from each emotion:
@@ -90,21 +88,18 @@ Note: We would upload the csvs themselves but Github says the files are too larg
 ### Model 1 Ver. 1
 
 Silhouette score using SVD:  0.33141524771150843
-
 Silhouette score using PCA:  0.33614953536518816
 
 ![Model1V1Results3](images/Model1V1Results3.png)
 ![Model1V1Results1](images/Model1V1Results1.png)
 ![Model1V1Results2](images/Model1V1Results2.png)
 
-
-
 Classification Accuracy: 14.553836022390518
-
-
 
 ## Discussion
 #### TALK ABOUT THE RESULTS HERE, AND OUR THOUGHT PROCESS BEGINNING TO END. REALLY THINK IN THIS SECTION AND SHOW HOW YOU THINK SCIENTIFICALLY 
+
+
 In the preprocessing step, we decided to only grab 547 sample images from each class of emotion because one of the classes of emotion only had 547 sample images. Initially, we wanted more than 547 samples to train the model but having more than 547 samples will lead to bias in our model. Therefore, we only have 547 samples from each emotion class. The data was already downsized and gray-scaled so there wasn’t any other thing we would have done other than normalizing the pixels values of each image and dropping the columns “emotion” and “usage”. The column “emotion" is the classification of each image and the “usage” columns specify whether the image will be used for testing or training. We don't need these columns because we are doing unsupervised ML to classify each image and doing our own splitting of the images for testing and training. Before we do any machine learning, we wanted to check and remove any null data so it won’t impact the results of our model. 
 
 Our first model was not that great. The images closest to the centroids of each cluster seem to have no relationship to each other in human eyes but there is some patterns and relationship that only a computer can see. This is to say that there exists some underlying relationship between each image that could be used to better classify the images. We tried printing out more and more of each image at the centroids of each cluster but it seems like every image’s emotion is pretty much random to the naked eyes even though they are images from the centroid of each cluster and should have some relationship to each other. This could mean that the computer may have came out with different kind of classification that we are unaware of. For example, emotions like angry, sad, or happy is obvious to humans but to computer, it is entirely different. Therefore, we concluded that these emotions classification is something only computer can understand what it means and impossible for humans to understand these classification. Out of curiosity, we try a larger set of data to see if it yields better accuracy. And it did! But it only improved the accuracy by a little bit. 
