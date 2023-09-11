@@ -1,27 +1,24 @@
- # machinelearning-project
+# machinelearning-project
 
 ## Background
-The dataset consists of 35,887 entries. Each entry has 3 columns: emotion, pixels, and usage.
+Our dataset is named fer2013.csv and is a dataset that consists of 35,887, 28x28, pixelated images. As such, the dataset consists of 35,887 entries. Each entry has 3 columns: emotion, pixels, and usage. 
 
-Each face is classified into one of 7 emotions: anger, disgust, fear, happy, sad, surprise, or neutral. An encoding for these go into the emotion column for an entry.
+Each face is classified into one of 7 emotions: anger, disgust, fear, happy, sad, surprise, or neutral. An encoding for these goes into the emotion column for an entry. The pixel information for each image goes into the pixel column (a 48x48 image, so 2304 values should be in each entry's pixels column. Values range from 0-255). Usage is either training, public test, or private test, which is similar to saying which images should be used for training, validation, or testing.
 
-The pixel information for each image goes into the pixel column (a 48x48 image, so 2304 values should be in each entry's pixels column. Values range from 0-255)
-
-Lastly, usage decides whether or not an image will be used for training, publictest (validation), and privatetest. We will probably remove this.
-
-The dataset contains a good variety of faces which range from varying ages, people with/without makeup, people of different races, actors, even some instances of virtual avatars, etc.
-
-To summarize, the dataset contains a large variety and quantity of faces which will be very useful in making a machine learning model.
+The dataset contains a wide variety of faces, including individuals of varying ages, people with and without makeup, individuals from different racial backgrounds, actors, and even some instances of virtual avatars. In summary, this dataset offers a substantial and diverse collection of faces, making it highly valuable for training machine learning models.
 
 Link to database: https://ufile.io/40nmtjlw
 ## Introduction
 
-The motivation for this project is to test the limit of our technical abilities by training an unsupervised model to assign its own emotion labels per grey scale image'
-This method proves a unique challenge and insight into unsupervised learning models.
+We aim to create an unsupervised model and cluster the images via k-means clustering (while also applying PCA). This means taking out the emotion encodings/column (at least) of the original dataset. 
 
-We want to train the first model to cluster images into groups seperated by emotion accurately, and a second model that is trained on those newly labeled images and can recognize human emotions from a test set.
+We hope that the optimal number of clusters is 7 (like the original dataset, the number of emotions), which we then will manually assign each cluster an emotion label based on the closest images to each centroid. We then will assign the corresponding emotion to every image in that cluster and compare it with the original images in the dataset to see if the emotions are correct.
 
-The broader impact is giving anyone the ability to train a model to recognize human emotions without much human input.
+Creating a model for facial recognition is really cool to think about because a machine identifying faces and emotions was something unheard of in the early age of computers. Creating a somewhat successful model as a group of college students would be an achievement.
+
+We wanted to test our technical abilities as well by choosing an unsupervised, image-based project rather than a supervised one based on continuous values. This would allow us to push our limits and give us more confidence for more difficult projects in the future.
+
+The broader impact is that we could give anyone the ability to use our model and classify emotions with any image dataset they have. They would be able to train a model to recognize human emotions without much human input (just by uploading their image dataset)
 
 ## Methodology
 ### Data Preprocessing
