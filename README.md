@@ -88,6 +88,7 @@ Note: We would upload the csvs themselves but Github says the files are too larg
 ### Model 1 Ver. 1
 
 Silhouette score using SVD:  0.33141524771150843
+
 Silhouette score using PCA:  0.33614953536518816
 
 ![Model1V1Results3](images/Model1V1Results3.png)
