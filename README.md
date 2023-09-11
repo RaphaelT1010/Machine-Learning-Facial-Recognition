@@ -104,11 +104,14 @@ Silhouette score using SVD:  0.32887400851623083
 
 Silhouette score using PCA:  0.33287600572702764
 
-A few random images from each cluster
 ![Model1V2Results1](images/Model1V2Results1.png)
 
-The 30 closest images to each cluster centroid
+A few random images from each cluster
+
 ![Model1V2Results2](images/Model1V2Results2.png)
+
+The 30 closest images to each cluster centroid
+
 ![Model1V2Results3](images/Model1V2Results3.png)
 ![Model1V2Results4](images/Model1V2Results4.png)
 ![Model1V2Results5](images/Model1V2Results5.png)
