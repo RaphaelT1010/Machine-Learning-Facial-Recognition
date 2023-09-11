@@ -84,6 +84,10 @@ Silhouette score using SVD:  0.33141524771150843
 Silhouette score using PCA:  0.33614953536518816
 
 ![Model1V1Results1](images/Model1V1Results1.png)
+![Model1V1Results2](images/Model1V1Results2.png)
+![Model1V1Results3](images/Model1V1Results3.png)
+![Model1V1Results4](images/Model1V1Results4.png)
+![Model1V1Results5](images/Model1V1Results5.png)
 
 
 Classification Accuracy: 14.553836022390518
