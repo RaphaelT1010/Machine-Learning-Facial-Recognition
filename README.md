@@ -117,6 +117,9 @@ The 30 closest images to each cluster centroid
 
 Classification Accuracy: 14.84351261014889
 
+Note: Refer to FinalModelProject.ipynb for specific code and the above information. Obviously will randomize depending on the split and how our script grabs from the dataset.
+
+
 ## Discussion
 #### TALK ABOUT THE RESULTS HERE, AND OUR THOUGHT PROCESS BEGINNING TO END. REALLY THINK IN THIS SECTION AND SHOW HOW YOU THINK SCIENTIFICALLY 
 ### "This will mimic the sections you have created in your methods section as well as new sections you feel you need to create."
