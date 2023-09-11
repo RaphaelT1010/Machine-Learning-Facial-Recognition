@@ -22,19 +22,45 @@ Each face is classified into one of 7 emotions: anger, disgust, fear, happy, sad
 
 The dataset contains a wide variety of faces, including individuals of varying ages, people with and without makeup, individuals from different racial backgrounds, actors, and even some instances of virtual avatars. In summary, this dataset offers a substantial and diverse collection of faces, making it highly valuable for training machine learning models.
 
+The dataset consisted of 35887 images/entries. We found this through calling the len() function on the dataset. We found that each entry had 3 columns: emotion, pixels, and usage and found it through calling .columns on the dataset.
+
+We confirmed that the dataset has seven encodings for each emotion by calling df[‘emotion’].unique(). We also confirmed that each pixel entry had 2304 different numbers, as our 48x48 image should have this much. We also confirmed that there were three different usages by calling df[‘Usage’].unique(),
+
+We found that the emotion categories had a significant imbalance.  We did this through calling df.emotion.value_counts() and found that emotion 3 (happy) had significantly more images than the emotion 1(disgust), with 8989 and 546 images respectively.
+
+There were no null/nan values as well, which we confirmed with .isna(). We called .dropna() for good measure afterwards.
+
+Lastly, we plotted images from each emotion category to ensure there were no deformities and that each image was appropriately labeled. We created a function called displayClasses and basically plotted two images from each emotion category. We scanned our dataset for the first two occurrences, and implemented plot/subplot to get all images into one plot.
+
 Link to database: https://ufile.io/40nmtjlw
 
 ### Data Preprocessing
-The dataset is already almost completely preprocessed. The pixels have been compressed to be 48 x 48 and have already been converted to greyscale. This means we have to do a little preprocessing on the images.
+We found that the dataset was mostly preprocessed already.  The images have been compressed to be 48 x 48 and have already been converted to greyscale. 
 
-However, we plan to normalize the grey scale values within each entry's pixel column. This will make the pixel column more readable, and less greyscale intensity with numerous images may help with overall speed as normalizing may help with gradient calculation.
+Because our dataset was quite large (at around 36k images), we decided to cut down on it. We decided to get 547 images from each of the seven emotions, totalling at 3829 images for our model to train and test on. 
 
-We also plan to get an even amount of images from each emotion class, 547, in order to ensure our model doesn't become biased to seeing one emotion too much and hopefully speed up computations for our dataset. This will also justify our removal of the usage column.
+As a result, we created a script that could get x images from each emotion category (we could set x to anything in case we felt like we needed more images). Our cut down dataset would be contained in a csv called ‘face-emo.csv’ which we then would normalize.
 
-The images don't need to be cropped or resized. We don't need to crop them because the images are already pretty decently focused on people's faces, and a good facial recognition model should be able to detect faces even in bad circumstances. They don't need to be resized too because they are already tiny. Normalization will most likely occur. 
+We also normalized all pixel values. This was done using min max scalar.
+
+We also dropped the emotion encoding and usage columns of the dataset. 
 
 ### Models
-For our Face emotion recognition model, we decided to use unsupervised learning. We used kmeans clustering to cluster the data categorizing it into different groups that could represent the different types of emotions. In our model, the images are converted into 2D arrays. We used PCA to reduce the dimension of the images before fitting them into our kmeans model. Since we have a total of 7 types of emotions, we chose a cluster value of 7. To evaluate the model's efficiency, we used the silhouette score as a metric. So far when training the model we obtain a silhouette score of about 0.3. To improve the model, we applied cross-validation. However, the score only increased by about 0.01. An alternative to improve our model could be data transformation or a different form of data preprocessing using an algorithm different from PCA.
+
+## Model 1 Ver. 1
+Our first model would be focused around K-means clustering and seeing if we should use either an SVD or PCA approach.
+
+To test the quality of clustering in machine learning, silhouette scores are often calculated. We decided to test the silhouette scores of both an SVD and PCA approach. They were very similar, with PCA being slightly better, so we clustered according to PCA.
+
+We then wanted to check the optimal number of components and clusters for our dataset after our initial clustering with PCA. We set a range for the number of principal components (2-5) and the number of clusters (5-15) to see if our model could potentially spot other emotions. Any combination that would increase our silhouette score would be the one that we would use, with us using cross validation on top of this. 
+
+In the end, everything gave a roughly similar silhouette score (around .33) so we decided to go with our initial 2 principal components, 7 cluster plot.
+
+We then plotted random images from each cluster and see if any cluster followed an inherent pattern or similar emotion. We then plotted the 14 images closest to each cluster centroid to see if the emotions shown would be similar. Ideally, those closest to the centroid would show similar emotions, as their principal components should be the same.
+
+We then used the plots of the above images and manually mapped a cluster back to a certain emotion. This was based on what we saw the most. We then applied an emotion label back to all images based on which cluster they belonged to.
+
+We then called accuracy_score to compare how our model clustered each image according to PCA (with our manual labels) with the original dataset’s emotion labels. Any mismatch would lead our accuracy to be lower and any match would lead our accuracy to be higher.
 
 ## Results
 #### DUMP OUT THE RESULTS HERE BUT DONT TALK ABOUT THEM, ADD DIAGRAMS OF RESULTS, THE CLUSTERING DIAGRAM, OR OTHERS THAT SHOW OUR RESULTS
