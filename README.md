@@ -98,6 +98,37 @@ Classification Accuracy: 14.553836022390518
 
 ## Discussion
 #### TALK ABOUT THE RESULTS HERE, AND OUR THOUGHT PROCESS BEGINNING TO END. REALLY THINK IN THIS SECTION AND SHOW HOW YOU THINK SCIENTIFICALLY 
+### "This will mimic the sections you have created in your methods section as well as new sections you feel you need to create."
+## Data Exploration
+Overall, this dataset should have not provided any problems in making a successful model. There’s great variety in the images, and all images should be labeled accordingly. There were actors, famous politicians, virtual avatars, people of varying ages, etc., so there should be no issues in the quality of the image dataset.
+
+If there are errors in the labeling of images, the overall size of the dataset (35557 images) should be enough to outweigh those misclassifications (given the total is small relative to the size of the dataset). The probability that we grab the majority of misclassifications into our ‘face-emo.csv’ is also relatively low due to the number of images we grab in our script.
+
+The dataset itself was used in numerous other models as well with high accuracies, so it’s very hard to attack the quality of the dataset. In other words, the reason for a faulty or lacking model would least likely be from the quality of the dataset itself.
+
+## Data Preprocessing
+Considering the imbalance in the number of images in our emotion categories (our largest emotion category had 8989 images and the smallest had 547), we thought using a script to cut down our dataset would be for two main benefits. 
+
+The first was to speed up any computations we had to do. This would be important because we would end up taking out the emotion labels, cluster all images, reapply an emotion label manually, and then cross reference that back with the original dataset. This equates to touching each entry at least 4 times (at the best case) meaning that we would have to do a modification or compare 144,000 times.
+
+The second reason was to eliminate any potential bias, as the model may train too much on a specific emotion and not another.
+
+This was a huge oversight for us, as we effectively cut our 36k image dataset all the way down to a 4k image dataset. With a split as well, this would mean that the model would have even less data to train on.
+
+The reason for our accuracy being so low for the first model could be because of how small we made our dataset, as the model just didn’t have enough faces to train on. A model should have a large amount of data to train on regardless of supervised or unsupervised.
+
+As a result, we expanded it from 547 images of each emotion to 4000 of each (giving us 24547 images). Emotion 1 doesn’t have that many (547 images only), but sacrificing a bit of bias is worth it, because it ensures that the model will train more intensively and accurately.
+
+The reason for normalizing was to make the pixel column more readable, and less grayscale intensity with numerous images may help with overall speed as normalizing may help with analyzing principal components in the PCA process. We could similarly divide each value by 255 and convert each to a float, as grayscale pixel values range from 0-255.
+
+The reason we dropped the emotion encoding column of the dataset was because we were planning to do an unsupervised approach on the dataset (so we need to get rid of the emotion label).
+
+There was some debate in our group whether we should have left the usage column in or not. Those in favor (wanted to drop) wanted to avoid any bias by dropping the usage column. A good model should be able to train on whatever data was given, not carefully crafted/specific ones from a huge dataset. Those against (wanted to keep it) said that validation would help the training greatly, and that the authors of the dataset painfully labeled each and every image to use for training, validation, or testing purposefully. We ultimately dropped it in our first model. 
+
+Our dataset being cut down significantly is probably more responsible for our low accuracy in the first model than not having validation, as there are high accuracy models out there that don’t use validation in the first place.
+
+
+## Model 1 Ver. 1
 
 
 In the preprocessing step, we decided to only grab 547 sample images from each class of emotion because one of the classes of emotion only had 547 sample images. Initially, we wanted more than 547 samples to train the model but having more than 547 samples will lead to bias in our model. Therefore, we only have 547 samples from each emotion class. The data was already downsized and gray-scaled so there wasn’t any other thing we would have done other than normalizing the pixels values of each image and dropping the columns “emotion” and “usage”. The column “emotion" is the classification of each image and the “usage” columns specify whether the image will be used for testing or training. We don't need these columns because we are doing unsupervised ML to classify each image and doing our own splitting of the images for testing and training. Before we do any machine learning, we wanted to check and remove any null data so it won’t impact the results of our model. 
