@@ -78,6 +78,15 @@ We then called accuracy_score to compare how our model clustered each image acco
 
 ### Data Preprocessing
 
+Our dataset before:
+
+![DataPreprocessingResults1](images/DataPreprocessingResults1.png)
+
+Our dataset after, normalized and truncated to 547 entries from each emotion:
+![DataPreprocessingResults2](images/DataPreprocessingResults2.png)
+
+Note: We would upload the csvs themselves but Github says the files are too large. If you'd like more details, refer to the first part of PreprocessingAndFirstModelBuildingMilestone.ipynb
+
 ### Model 1 Ver. 1
 
 Silhouette score using SVD:  0.33141524771150843
