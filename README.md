@@ -4,7 +4,11 @@
 
 Facial recognition technology is useful and can be applied to a wide range of applications. It can be used as a strong form of security and can enable developers to create potentially more convenient user interfaces. This makes creating a model for facial recognition important and useful for society.
 
+Our dataset is named fer2013.csv and is a dataset that consists of 35,887, 48x48, pixelated images of varying people of varying emotions. As such, the dataset consists of 35,887 entries. Each entry has 3 columns: emotion, pixels, and usage. 
+
 We aim to create an unsupervised model and that can classify human emotions by using k-means clustering and PCA. This means taking out the emotion encodings/column (at least) of the original dataset. 
+
+
 
 ![Kmeans Clustering](images/KmeansClustering.png)
 
