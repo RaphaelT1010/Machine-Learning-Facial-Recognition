@@ -37,21 +37,22 @@ We also plan to get an even amount of images from each emotion class, 547, in or
 The images don't need to be cropped or resized. We don't need to crop them because the images are already pretty decently focused on people's face, and a good facial recognition model should be able to detect faces even in bad circumstances. They don't need to be resized too because they are already very small. Normalization will mostly likely occur. 
 
 ### Models
-#### TALK ABOUT WHAT TYPE OF MODELS WE USED, WHY WE USED THEM AND WHY/WHAT ORDER WE USED THEM.
+#### TALK ABOUT WHAT TYPE OF MODELS WE USED, WHY WE USED THEM, AND WHY/WHAT ORDER WE USED THEM.
 For our Face emotion recognition model, we decided to used unsupervised learning. We used kmeans clustering to cluster the data categorizing it into different groups that could represent the different type of emotions. In our model, the images are converted into 2D arrays. We used PCA to reduce the dimension of the images before fitting them into our kmeans model. Since we have a total of 7 type of emotions, we chose a cluster value of 7. To evaluate the efficiency of the model, we used the silhouette score as metric. So far when training the model we obtain a silhouette score of about 0.3. To improve the model, we applied cross validation. However, the score only increased by about 0.01. An alternative to improve our model could be data transformation or a different form of data preprocessing using an algorithm different from PCA.
 
 ### First Analysis
-Since we are going for an unsupervised approach we don't really have a true over/under fitting situation so we attempted to compare the clusters to the original dataset. We mapped out our clustered images to the emotions from the original dataset. This was done by plotting a random set of images from each cluster and then mapping out each emotion visually to their respective original emotion. This process was challenging because the clustering wasn't great so we mapped to the emotion that was most dominant. We got an accuracy of about 14% meaning that there was little correlation to the original emotions. Our next steps are to improve the model to increase our silhouette score, which in turn might increase the classification accuracy of the model.
+#### MOVE THIS INFORMATION INTO THE DISCUSSION SECTION
+Since we are going for an unsupervised approach we don't really have a true over/underfitting situation so we attempted to compare the clusters to the original dataset. We mapped out our clustered images to the emotions from the original dataset. This was done by plotting a random set of images from each cluster and then mapping out each emotion visually to their respective original emotion. This process was challenging because the clustering wasn't great so we mapped to the emotion that was most dominant. We got an accuracy of about 14% meaning that there was little correlation to the original emotions. Our next steps are to improve the model to increase our silhouette score, which in turn might increase the classification accuracy of the model.
 
 ## Results
 #### DUMP OUT THE RESULTS HERE BUT DONT TALK ABOUT THEM, ADD DIAGRAMS OF RESULTS, THE CLUSTERING DIAGRAM, OR OTHERS THAT SHOW OUR RESULTS
 #### LAST PARAGRAPH HERE IS ABOUT THE FINAL MODEL AND FINAL RESULTS SUMMARY
 
 ## Discussion
-#### TALK ABOUT THE DATA HERE, AND OUR THOUGHT PROCESS BEGINING TO END. REALLY THINK IN THIS SECTION AND SHOW HOW YOU THINK SCIENTIFICALLY 
+#### TALK ABOUT THE DATA HERE, AND OUR THOUGHT PROCESS BEGINNING TO END. REALLY THINK IN THIS SECTION AND SHOW HOW YOU THINK SCIENTIFICALLY 
 
 ## Conclusion
-#### WRAP UP, MIND BUMP, OPIONIONS FUTURE PLANS, WHAT WOULD WE DO DIFFERENT.
+#### WRAP UP, MIND BUMP, OPINIONS FUTURE PLANS, WHAT WOULD WE DO DIFFERENT.
 
 ## Collaboration
 #### EVERYONE WILL BE FILL THIS PART OUT FOLLOW EXAMPLE...
