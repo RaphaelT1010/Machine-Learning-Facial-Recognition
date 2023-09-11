@@ -109,12 +109,6 @@ Silhouette score using PCA:  0.33287600572702764
 
 ![Model1V2Results1](images/Model1V2Results1.png)
 
-'''
-A few random images from each cluster
-
-![Model1V2Results2](images/Model1V2Results2.png)
-'''
-
 The 30 closest images to each cluster centroid
 
 ![Model1V2Results3](images/Model1V2Results3.png)
