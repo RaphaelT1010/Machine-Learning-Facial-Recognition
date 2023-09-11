@@ -12,6 +12,8 @@ Link to database: https://ufile.io/40nmtjlw
 
 We aim to create an unsupervised model and cluster the images via k-means clustering (while also applying PCA). This means taking out the emotion encodings/column (at least) of the original dataset. 
 
+![Kmeans Clustering](images/KmeansClustering.png)
+
 We hope that the optimal number of clusters is 7 (like the original dataset, the number of emotions), which we then will manually assign each cluster an emotion label based on the closest images to each centroid. We then will assign the corresponding emotion to every image in that cluster and compare it with the original images in the dataset to see if the emotions are correct.
 
 Creating a model for facial recognition is really cool to think about because a machine identifying faces and emotions was something unheard of in the early age of computers. Creating a somewhat successful model as a group of college students would be an achievement.
