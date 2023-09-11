@@ -53,7 +53,7 @@ We also dropped the emotion encoding and usage columns of the dataset.
 
 ### Models
 
-## Model 1 Ver. 1
+### Model 1 Ver. 1
 Our first model would be focused around K-means clustering and seeing if we should use either an SVD or PCA approach.
 
 To test the quality of clustering in machine learning, silhouette scores are often calculated. We decided to test the silhouette scores of both an SVD and PCA approach. They were very similar, with PCA being slightly better, so we clustered according to PCA.
