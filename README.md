@@ -99,6 +99,19 @@ Classification Accuracy: 14.553836022390518
 
 Note: Refer to PreprocessingAndFirstModelBuildingMilestone.ipynb for specific code and the above information. Obviously will randomize depending on the split and how our script grabs from the dataset.
 
+### Model 1 Ver. 2
+Silhouette score using SVD:  0.32887400851623083
+
+Silhouette score using PCA:  0.33287600572702764
+
+![Model1V2Results1](images/Model1V2Results1.png)
+![Model1V2Results2](images/Model1V2Results2.png)
+![Model1V2Results3](images/Model1V2Results3.png)
+![Model1V2Results4](images/Model1V2Results4.png)
+![Model1V2Results5](images/Model1V2Results5.png)
+
+Classification Accuracy: 14.84351261014889
+
 ## Discussion
 #### TALK ABOUT THE RESULTS HERE, AND OUR THOUGHT PROCESS BEGINNING TO END. REALLY THINK IN THIS SECTION AND SHOW HOW YOU THINK SCIENTIFICALLY 
 ### "This will mimic the sections you have created in your methods section as well as new sections you feel you need to create."
