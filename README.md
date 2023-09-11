@@ -8,10 +8,6 @@ Our dataset is named fer2013.csv and is a dataset that consists of 35,887, 48x48
 
 We aim to create an unsupervised model and that can classify human emotions by using k-means clustering and PCA. This means taking out the emotion encodings/column (at least) of the original dataset. 
 
-
-
-![Kmeans Clustering](images/KmeansClustering.png)
-
 We hope that the optimal number of clusters is 7 (like the original dataset, the number of emotions), which we then will manually assign each cluster an emotion label based on the closest images to each centroid. We then will assign the corresponding emotion to every image in that cluster and compare it with the original images in the dataset to see if the emotions are correct.
 
 Creating a model for facial recognition is really cool to think about because a machine identifying faces and emotions was something unheard of in the early age of computers. Creating a somewhat successful model as a group of college students would be an achievement.
@@ -19,6 +15,10 @@ Creating a model for facial recognition is really cool to think about because a 
 We wanted to test our technical abilities as well by choosing an unsupervised, image-based project rather than a supervised one based on continuous values. This would allow us to push our limits and give us more confidence for more difficult projects in the future.
 
 The broader impact is that we could give anyone the ability to use our model and classify emotions with any image dataset they have. They would be able to train a model to recognize human emotions without much human input (just by uploading their image dataset)
+
+## Figures
+
+![Kmeans Clustering](images/KmeansClustering.png)
 
 ## Methods
 ### Data Exploration
@@ -69,6 +69,14 @@ We then called accuracy_score to compare how our model clustered each image acco
 ## Results
 #### DUMP OUT THE RESULTS HERE BUT DONT TALK ABOUT THEM, ADD DIAGRAMS OF RESULTS, THE CLUSTERING DIAGRAM, OR OTHERS THAT SHOW OUR RESULTS
 #### LAST PARAGRAPH HERE IS ABOUT THE FINAL MODEL AND FINAL RESULTS SUMMARY
+
+### Data Exploration
+
+### Data Preprocessing
+
+## Model 1 Ver. 1
+
+
 
 ## Discussion
 #### TALK ABOUT THE RESULTS HERE, AND OUR THOUGHT PROCESS BEGINNING TO END. REALLY THINK IN THIS SECTION AND SHOW HOW YOU THINK SCIENTIFICALLY 
