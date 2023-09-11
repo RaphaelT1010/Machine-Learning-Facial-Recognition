@@ -72,6 +72,9 @@ We then called accuracy_score to compare how our model clustered each image acco
 
 ### Data Exploration
 
+![DataExplorationResults1](images/DataExplorationResults1.png)
+
+
 ### Data Preprocessing
 
 ## Model 1 Ver. 1
