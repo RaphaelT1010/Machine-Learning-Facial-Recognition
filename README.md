@@ -78,7 +78,7 @@ We then called accuracy_score to compare how our model clustered each image acco
 
 ### Data Preprocessing
 
-## Model 1 Ver. 1
+### Model 1 Ver. 1
 
 
 
