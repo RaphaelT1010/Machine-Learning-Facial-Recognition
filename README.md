@@ -66,6 +66,16 @@ We then used the plots of the above images and manually mapped a cluster back to
 
 We then called accuracy_score to compare how our model clustered each image according to PCA (with our manual labels) with the original dataset’s emotion labels. Any mismatch would lead our accuracy to be lower and any match would lead our accuracy to be higher.
 
+
+### Model 1 Ver. 2
+We were originally going to try and create a new model that would be a convolutional neural network. However, due to time constraints, we tried our best to up the accuracy of our previous model.
+
+There’s not much that was significantly different from the first model other than various optimizations. We didn’t truncate as much information when compared to the first version. Our version 1 had 3829 entries, as we got 547 images from each emotion. Instead, we upped it to 4000 images per emotion for a total of 24547 images (emotion 1 only had 547, which is why it totaled to this). This was possible due to the script we made.
+
+There were also optimizations in some of the code. We optimized the code for the images closest to each cluster centroid and the error analysis code.
+
+Other than the above, version 2 is almost identical to version 1.
+
 ## Results
 #### DUMP OUT THE RESULTS HERE BUT DONT TALK ABOUT THEM, ADD DIAGRAMS OF RESULTS, THE CLUSTERING DIAGRAM, OR OTHERS THAT SHOW OUR RESULTS
 #### LAST PARAGRAPH HERE IS ABOUT THE FINAL MODEL AND FINAL RESULTS SUMMARY
