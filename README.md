@@ -121,12 +121,11 @@ As a result, we expanded it from 547 images of each emotion to 4000 of each (giv
 
 The reason for normalizing was to make the pixel column more readable, and less grayscale intensity with numerous images may help with overall speed as normalizing may help with analyzing principal components in the PCA process. We could similarly divide each value by 255 and convert each to a float, as grayscale pixel values range from 0-255.
 
-The reason we dropped the emotion encoding column of the dataset was because we were planning to do an unsupervised approach on the dataset (so we need to get rid of the emotion label).
+The reason we dropped the emotion encoding column of the dataset was because we were planning to do an unsupervised approach on the dataset. The intention was to see if our model could potentially categorize these emotions back together.
 
 There was some debate in our group whether we should have left the usage column in or not. Those in favor (wanted to drop) wanted to avoid any bias by dropping the usage column. A good model should be able to train on whatever data was given, not carefully crafted/specific ones from a huge dataset. Those against (wanted to keep it) said that validation would help the training greatly, and that the authors of the dataset painfully labeled each and every image to use for training, validation, or testing purposefully. We ultimately dropped it in our first model. 
 
 Our dataset being cut down significantly is probably more responsible for our low accuracy in the first model than not having validation, as there are high accuracy models out there that don’t use validation in the first place.
-
 
 ### Model 1 Ver. 1
 
