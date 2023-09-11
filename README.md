@@ -56,7 +56,7 @@ Our first model was not that great. The images closest to the centroids of each 
 
 
 ## Conclusion
-#### WRAP UP, MIND BUMP, OPINIONS FUTURE PLANS, WHAT WOULD WE DO DIFFERENT.
+#### WRAP UP, MIND DUMP, OPINIONS FUTURE PLANS, WHAT WOULD WE DO DIFFERENT.
 
 ## Collaboration
 #### EVERYONE WILL BE FILL THIS PART OUT FOLLOW EXAMPLE...
