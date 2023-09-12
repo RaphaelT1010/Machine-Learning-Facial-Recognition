@@ -197,6 +197,8 @@ Since we are going for an unsupervised approach we don't really have a true over
 ## Conclusion
 #### WRAP UP, MIND DUMP, OPINIONS FUTURE PLANS, WHAT WOULD WE DO DIFFERENT.
 
+The result that we got wasn't quite what we would have liked to see. For example, our accuracy was low and after some messing around, we were only able to increase the accuracy by a little. We realized that 547 samples from each class is pretty small and as a result, we have cut down the size of our dataset by a significant amount. However, allowing more samples did not make a huge impact on our accuracy, refer to model 2. Thus, it seems that we may have to look at other models such as HOG and LBP. Given the fact that summer session is short, we will not have time to try these models. However, we may work on this project even after summer is over.
+
 ## Collaboration
 #### EVERYONE WILL FILL THIS PART OUT FOLLOW EXAMPLE...
 ### Start with Name: Title: Contribution. If the person contributed nothing then just put in writing: Did not participate in the project.
