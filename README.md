@@ -163,7 +163,7 @@ Our dataset being cut down significantly is probably more responsible for our lo
 
 ### Model 1 Ver. 1
 
-There were concerns about the size of our dataset after preprocessing, as we cut down our 36k dataset to a 4k dataset. With the train test split as well, the number of entries that the model would train on would be even smaller.
+There were concerns about the size of our dataset after preprocessing, as we cut down our 36k dataset to a 4k dataset. With the train test split as well, the number of entries that the model would train on would be even smaller. This would end up not mattering, as in version 2 we made the dataset bigger but still had a very low accuracy.
 
 An interesting thing that our results showed was that our accuracy was about 14. This is 100/7. This suggests that our model is completely random, or is simply guessing, in what images belong to what clusters. In other words, the model is bound to get 1/7 correct if we only have 7 classes. This leads to the possibility that something is simply coded wrong in our model since the logic of using K-means with PCA is sound.
 
