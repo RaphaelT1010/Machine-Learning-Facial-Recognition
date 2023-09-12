@@ -198,8 +198,9 @@ Since we are going for an unsupervised approach we don't really have a true over
 #### WRAP UP, MIND DUMP, OPINIONS FUTURE PLANS, WHAT WOULD WE DO DIFFERENT.
 
 ## Collaboration
-#### EVERYONE WILL BE FILL THIS PART OUT FOLLOW EXAMPLE...
+#### EVERYONE WILL FILL THIS PART OUT FOLLOW EXAMPLE...
 ### Start with Name: Title: Contribution. If the person contributed nothing then just put in writing: Did not participate in the project.
 ### Dillon Jackson: Wroked on the readme, accuracy testing, and project facilitation 
 ### Billy Ouattara: Wrote the script for balancing the different type of images, and built the initial unsupervised model.
 ### Raphael Talento: Report, wrote code for images closest to each centroid, data exploration
+### Tou Yang: Worked on the Report, readme, replicating and analyzing results, setting up meeting time, help with calculating the error of the model. 
