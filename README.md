@@ -191,7 +191,11 @@ Since we are going for an unsupervised approach we don't really have a true over
 
 ## Conclusion
 
-The result that we got wasn't quite what we would have liked to see. For example, our accuracy was low and after some messing around, we were only able to increase the accuracy by a little. We realized that 547 samples from each class is pretty small and as a result, we have cut down the size of our dataset by a significant amount. However, allowing more samples did not make a huge impact on our accuracy, refer to model 2. Thus, it seems that we may have to look at other models such as HOG and LBP. Given the fact that summer session is short, we will not have time to try these models. However, we may work on this project even after summer is over.
+The reason for the failure in this model is due to the fact we’re applying the wrong type of model to the wrong type of problem. PCA is more useful in facial recognition, distinguishing between faces and non-faces. However, our type of problem is not just facial recognition. It’s detecting certain emotions from faces, which is a step up between distinguishing faces and non-faces. A convolutional neural network would’ve been a much better model for this type of problem as we can identify certain facial features from different emotions (like furrowed brows or a wide grin) through filters.
+
+The result that we got wasn't what we would have liked to see. Our accuracy was low and after some messing around, we were only able to increase the accuracy by a little. We realized that 547 samples from each class is pretty small and as a result, we have cut down the size of our dataset by a significant amount. However, allowing more samples did not make a huge impact on our accuracy, referencing the above. Thus, it seems that we may have to look at other models such as HOG, LBP, or readjusting our model for a different dataset for one that's just faces and nonfaces. 
+
+Given the fact that summer session is short, we will not have time to try these models. However, we may work on this project even after summer is over.
 
 ## Collaboration
 ### Nivedita Amanjee: Worked on data preprocessing such as feature scaling, assisted with unsupervised model organization, and contributed to image plotting code.
