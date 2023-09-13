@@ -197,6 +197,6 @@ The result that we got wasn't quite what we would have liked to see. For example
 ### Nivedita Amanjee: Worked on data preprocessing such as feature scaling, assisted with unsupervised model organization, and contributed to image plotting code.
 ### Dillon Jackson: Wroked on the readme, accuracy testing, and project/meeting facilitation 
 ### Billy Ouattara: Wrote the script for balancing the different type of images, and built the initial unsupervised model.
-### Raphael Talento: Report, wrote code for images closest to each centroid, data exploration
+### Raphael Talento: Report, wrote code for images closest to each centroid, data exploration, cleaning up code
 ### Tou Yang: Worked on the Report, readme, replicating and analyzing results, setting up meeting time, help with calculating the error of the model.
 ### Lucas Kjellberg: Worked on readme, project planning.
