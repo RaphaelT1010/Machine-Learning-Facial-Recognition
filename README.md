@@ -202,6 +202,7 @@ The result that we got wasn't quite what we would have liked to see. For example
 ## Collaboration
 #### EVERYONE WILL FILL THIS PART OUT FOLLOW EXAMPLE...
 ### Start with Name: Title: Contribution. If the person contributed nothing then just put in writing: Did not participate in the project.
+### Nivedita Amanjee: Worked on data preprocessing such as feature scaling, assisted with unsupervised model organization, and contributed to image plotting code.
 ### Dillon Jackson: Wroked on the readme, accuracy testing, and project facilitation 
 ### Billy Ouattara: Wrote the script for balancing the different type of images, and built the initial unsupervised model.
 ### Raphael Talento: Report, wrote code for images closest to each centroid, data exploration
