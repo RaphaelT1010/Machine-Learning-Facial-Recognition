@@ -20,6 +20,9 @@ The broader impact is that we could give anyone the ability to use our model and
 
 ![Kmeans Clustering](images/KmeansClustering.png)
 
+![PCA Example](images/PCAIrisExample.png)
+
+
 ## Methods
 ### Data Exploration
 Our dataset is named fer2013.csv and is a dataset that consists of 35,887, 28x28, pixelated images. As such, the dataset consists of 35,887 entries. Each entry has 3 columns: emotion, pixels, and usage. 
