@@ -205,7 +205,9 @@ To avoid this type of oversight for projects in the future, it seems that more p
 Given the fact that summer session is short, we will not have time to try these models. However, we may work on this project even after summer is over.
 
 ## Final Model and Final Results Summary
-Our silhouette score using SVD was 0.32887400851623083. Our silhouette score using PCA was  0.33614953536518816. Our final accuracy was 14.84351261014889. If you'd like to see what images were closest to the centroid, please refer back to the Results Model 1 Ver. 2 section/
+Our silhouette score using SVD was 0.32887400851623083. Our silhouette score using PCA was  0.33614953536518816. Our final accuracy was 14.84351261014889. 
+
+If you'd like to see what images were closest to the centroid, please refer back to the Results Model 1 Ver. 2 section.
 
 The reason for the failure in this model is due to the fact we’re applying the wrong type of model to the wrong type of problem. PCA is more useful in facial recognition, distinguishing between faces and non-faces. However, our type of problem is not just facial recognition. It’s detecting certain emotions from faces, which is a step up between distinguishing faces and non-faces. A convolutional neural network would’ve been a much better model for this type of problem as we can identify certain facial features from different emotions (like furrowed brows or a wide grin) through filters.
 
