@@ -198,4 +198,5 @@ The result that we got wasn't quite what we would have liked to see. For example
 ### Dillon Jackson: Wroked on the readme, accuracy testing, and project/meeting facilitation 
 ### Billy Ouattara: Wrote the script for balancing the different type of images, and built the initial unsupervised model.
 ### Raphael Talento: Report, wrote code for images closest to each centroid, data exploration
-### Tou Yang: Worked on the Report, readme, replicating and analyzing results, setting up meeting time, help with calculating the error of the model. 
+### Tou Yang: Worked on the Report, readme, replicating and analyzing results, setting up meeting time, help with calculating the error of the model.
+### Lucas Kjellberg: Worked on readme, project planning.
