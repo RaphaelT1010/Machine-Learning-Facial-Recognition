@@ -188,7 +188,7 @@ The reason for the failure in this model is due to the fact we’re applying the
 
 ### Overall Discussion
 
-(Basically a shortened version of all our discussions from above)
+(Basically a shortened version that combines all our discussions from above)
 
 In the preprocessing step, we decided to only grab 547 sample images from each class of emotion because one of the classes of emotion only had 547 sample images. Initially, we wanted more than 547 samples to train the model but having more than 547 samples will lead to bias in our model. Therefore, we only have 547 samples from each emotion class. The data was already downsized and gray-scaled so there wasn’t any other thing we would have done other than normalizing the pixels values of each image and dropping the columns “emotion” and “usage”. The column “emotion" is the classification of each image and the “usage” columns specify whether the image will be used for testing or training. We don't need these columns because we are doing unsupervised ML to classify each image and doing our own splitting of the images for testing and training. Before we do any machine learning, we wanted to check and remove any null data so it won’t impact the results of our model. 
 
@@ -199,6 +199,8 @@ Since we are going for an unsupervised approach we don't really have a true over
 ## Conclusion
 
 The reason for the failure in this model is due to the fact we’re applying the wrong type of model to the wrong type of problem. PCA is more useful in facial recognition, distinguishing between faces and non-faces. However, our type of problem is not just facial recognition. It’s detecting certain emotions from faces, which is a step up between distinguishing faces and non-faces. A convolutional neural network would’ve been a much better model for this type of problem as we can identify certain facial features from different emotions (like furrowed brows or a wide grin) through filters.
+
+To avoid this type of oversight for projects in the future, it seems that more prior research would go a long away. A thing we wish we would've done differently is the type of model we selected for this dataset, as this minor change would've gone a long way in regards to our accuracy. We felt pressured to move quickly though as this is something none of us have ever coded before and we didn't know how long coding, troubleshooting, debugging, etc. would take us.
 
 The result that we got wasn't what we would have liked to see. Our accuracy was low and after some messing around, we were only able to increase the accuracy by a little. We realized that 547 samples from each class is pretty small and as a result, we have cut down the size of our dataset by a significant amount. However, allowing more samples did not make a huge impact on our accuracy, referencing the above. Thus, it seems that we may have to look at other models such as HOG, LBP, or readjusting our model for a different dataset for one that's just faces and nonfaces. 
 
