@@ -77,8 +77,6 @@ There were also optimizations in some of the code. We optimized the code for the
 Other than the above, version 2 is almost identical to version 1.
 
 ## Results
-#### DUMP OUT THE RESULTS HERE BUT DONT TALK ABOUT THEM, ADD DIAGRAMS OF RESULTS, THE CLUSTERING DIAGRAM, OR OTHERS THAT SHOW OUR RESULTS
-#### LAST PARAGRAPH HERE IS ABOUT THE FINAL MODEL AND FINAL RESULTS SUMMARY
 
 ### Data Exploration
 
@@ -131,8 +129,6 @@ Note: Refer to FinalModelProject.ipynb for specific code and the above informati
 
 
 ## Discussion
-#### TALK ABOUT THE RESULTS HERE, AND OUR THOUGHT PROCESS BEGINNING TO END. REALLY THINK IN THIS SECTION AND SHOW HOW YOU THINK SCIENTIFICALLY 
-### "This will mimic the sections you have created in your methods section as well as new sections you feel you need to create."
 ### Data Exploration
 Overall, this dataset should have not provided any problems in making a successful model. There’s great variety in the images, and all images should be labeled accordingly. There were actors, famous politicians, virtual avatars, people of varying ages, etc., so there should be no issues in the quality of the image dataset.
 
@@ -187,7 +183,6 @@ It’s once again realistically possible that something in our model was not cod
 
 The reason for the failure in this model is due to the fact we’re applying the wrong type of model to the wrong type of problem. PCA is more useful in facial recognition, distinguishing between faces and non-faces. However, our type of problem is not just facial recognition. It’s detecting certain emotions from faces, which is a step up between distinguishing faces and non-faces. A convolutional neural network would’ve been a much better model for this type of problem as we can identify certain facial features from different emotions (like furrowed brows or a wide grin) through filters.
 
-## MOVE THIS/COMBINE/REMOVE ACCORDING TO THE SECTIOSN ABOVE. DISCUSSION NEEDS TO HAVE SECTIONS THAT MIRROR THE PREVIOUS ONES.
 In the preprocessing step, we decided to only grab 547 sample images from each class of emotion because one of the classes of emotion only had 547 sample images. Initially, we wanted more than 547 samples to train the model but having more than 547 samples will lead to bias in our model. Therefore, we only have 547 samples from each emotion class. The data was already downsized and gray-scaled so there wasn’t any other thing we would have done other than normalizing the pixels values of each image and dropping the columns “emotion” and “usage”. The column “emotion" is the classification of each image and the “usage” columns specify whether the image will be used for testing or training. We don't need these columns because we are doing unsupervised ML to classify each image and doing our own splitting of the images for testing and training. Before we do any machine learning, we wanted to check and remove any null data so it won’t impact the results of our model. 
 
 Our first model was not that great. The images closest to the centroids of each cluster seem to have no relationship to each other in human eyes but there is some patterns and relationship that only a computer can see. This is to say that there exists some underlying relationship between each image that could be used to better classify the images. We tried printing out more and more of each image at the centroids of each cluster but it seems like every image’s emotion is pretty much random to the naked eyes even though they are images from the centroid of each cluster and should have some relationship to each other. This could mean that the computer may have came out with different kind of classification that we are unaware of. For example, emotions like angry, sad, or happy is obvious to humans but to computer, it is entirely different. Therefore, we concluded that these emotions classification is something only computer can understand what it means and impossible for humans to understand these classification. Out of curiosity, we try a larger set of data to see if it yields better accuracy. And it did! But it only improved the accuracy by a little bit. 
@@ -195,13 +190,10 @@ Our first model was not that great. The images closest to the centroids of each 
 Since we are going for an unsupervised approach we don't really have a true over/underfitting situation so we attempted to compare the clusters to the original dataset. We mapped out our clustered images to the emotions from the original dataset. This was done by plotting a random set of images from each cluster and then mapping out each emotion visually to their respective original emotion. This process was challenging because the clustering wasn't great so we mapped to the emotion that was most dominant. We got an accuracy of about 14% meaning that there was little correlation to the original emotions. Our next steps are to improve the model to increase our silhouette score, which in turn might increase the classification accuracy of the model.
 
 ## Conclusion
-#### WRAP UP, MIND DUMP, OPINIONS FUTURE PLANS, WHAT WOULD WE DO DIFFERENT.
 
 The result that we got wasn't quite what we would have liked to see. For example, our accuracy was low and after some messing around, we were only able to increase the accuracy by a little. We realized that 547 samples from each class is pretty small and as a result, we have cut down the size of our dataset by a significant amount. However, allowing more samples did not make a huge impact on our accuracy, refer to model 2. Thus, it seems that we may have to look at other models such as HOG and LBP. Given the fact that summer session is short, we will not have time to try these models. However, we may work on this project even after summer is over.
 
 ## Collaboration
-#### EVERYONE WILL FILL THIS PART OUT FOLLOW EXAMPLE...
-### Start with Name: Title: Contribution. If the person contributed nothing then just put in writing: Did not participate in the project.
 ### Nivedita Amanjee: Worked on data preprocessing such as feature scaling, assisted with unsupervised model organization, and contributed to image plotting code.
 ### Dillon Jackson: Wroked on the readme, accuracy testing, and project/meeting facilitation 
 ### Billy Ouattara: Wrote the script for balancing the different type of images, and built the initial unsupervised model.
